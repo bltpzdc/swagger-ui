@@ -1,11 +1,7 @@
 name: Update Swagger UI
 on:
-  push:
-    branches: [ main, master ]
-    paths: 
-      - '**.go'
-      - 'docs/**'
-      - '.github/workflows/docs.yml'
+  schedule:
+    - cron:  '0 10 * * *'
   workflow_dispatch:
 
 jobs:
